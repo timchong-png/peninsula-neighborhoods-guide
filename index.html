@@ -1,150 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peninsula & South Bay Neighborhoods | Tim Chong Realtor</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
-        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem 0; text-align: center; }
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        header p { font-size: 1.2rem; opacity: 0.9; }
-        nav { background: #2c3e50; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
-        nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; }
-        nav li { margin: 0 1rem; }
-        nav a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; }
-        nav a:hover { color: #3498db; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
-        .neighborhood-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0; }
-        .neighborhood-card { background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
-        .neighborhood-card:hover { transform: translateY(-5px); box-shadow: 0 8px 12px rgba(0,0,0,0.2); }
-        .neighborhood-card img { width: 100%; height: 200px; object-fit: cover; }
-        .neighborhood-card-content { padding: 1.5rem; }
-        .neighborhood-card h3 { color: #667eea; margin-bottom: 0.5rem; font-size: 1.5rem; }
-        .neighborhood-card p { color: #666; margin-bottom: 1rem; }
-        .stats { display: flex; justify-content: space-around; margin: 1rem 0; padding: 1rem 0; border-top: 1px solid #eee; }
-        .stat { text-align: center; }
-        .stat strong { display: block; color: #667eea; font-size: 1.2rem; }
-        .btn { display: inline-block; background: #667eea; color: white; padding: 0.8rem 1.5rem; border-radius: 5px; text-decoration: none; transition: background 0.3s; }
-        .btn:hover { background: #764ba2; }
-        footer { background: #2c3e50; color: white; text-align: center; padding: 2rem 0; margin-top: 3rem; }
-        footer a { color: #3498db; text-decoration: none; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peninsula & South Bay Neighborhoods | Tim Chong Realtor</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>🏡 Peninsula & South Bay Neighborhoods</h1>
-        <p>Your Complete Guide to Bay Area Communities | By Tim Chong, Realtor</p>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#palo-alto">Palo Alto</a></li>
-            <li><a href="#mountain-view">Mountain View</a></li>
-            <li><a href="#sunnyvale">Sunnyvale</a></li>
-            <li><a href="#cupertino">Cupertino</a></li>
-            <li><a href="#saratoga">Saratoga</a></li>
-            <li><a href="#los-gatos">Los Gatos</a></li>
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <nav class="nav">
+        <div class="logo">Tim Chong<span> Realtor</span></div>
+        <ul class="nav-links">
+          <li><a href="#palo-alto">Palo Alto</a></li>
+          <li><a href="#mountain-view">Mountain View</a></li>
+          <li><a href="#sunnyvale">Sunnyvale</a></li>
+          <li><a href="#cupertino">Cupertino</a></li>
+          <li><a href="#saratoga">Saratoga</a></li>
+          <li><a href="#los-gatos">Los Gatos</a></li>
         </ul>
-    </nav>
+      </nav>
 
-    <div class="container">
-        <h2 style="text-align: center; margin: 2rem 0; font-size: 2rem;">Discover Your Perfect Neighborhood</h2>
-        
-        <div class="neighborhood-grid">
-            <!-- Palo Alto -->
-            <div class="neighborhood-card" id="palo-alto">
-                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600" alt="Palo Alto">
-                <div class="neighborhood-card-content">
-                    <h3>Palo Alto</h3>
-                    <p>Home to Stanford University, Palo Alto offers excellent schools, tree-lined streets, and a vibrant downtown. Perfect for families and professionals.</p>
-                    <div class="stats">
-                        <div class="stat"><strong>9/10</strong>Schools</div>
-                        <div class="stat"><strong>$3.5M</strong>Median</div>
-                    </div>
-                    <a href="https://www.timchong-realtor.com" class="btn">Learn More</a>
-                </div>
-            </div>
-
-            <!-- Mountain View -->
-            <div class="neighborhood-card" id="mountain-view">
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600" alt="Mountain View">
-                <div class="neighborhood-card-content">
-                    <h3>Mountain View</h3>
-                    <p>Tech hub home to Google, offering diverse dining, parks, and a thriving downtown. Great for young professionals and tech workers.</p>
-                    <div class="stats">
-                        <div class="stat"><strong>8/10</strong>Schools</div>
-                        <div class="stat"><strong>$2.1M</strong>Median</div>
-                    </div>
-                    <a href="https://www.timchong-realtor.com" class="btn">Learn More</a>
-                </div>
-            </div>
-
-            <!-- Sunnyvale -->
-            <div class="neighborhood-card" id="sunnyvale">
-                <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600" alt="Sunnyvale">
-                <div class="neighborhood-card-content">
-                    <h3>Sunnyvale</h3>
-                    <p>Family-friendly community with top-rated schools, parks, and central location. Excellent value in the heart of Silicon Valley.</p>
-                    <div class="stats">
-                        <div class="stat"><strong>8/10</strong>Schools</div>
-                        <div class="stat"><strong>$1.9M</strong>Median</div>
-                    </div>
-                    <a href="https://www.timchong-realtor.com" class="btn">Learn More</a>
-                </div>
-            </div>
-
-            <!-- Cupertino -->
-            <div class="neighborhood-card" id="cupertino">
-                <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600" alt="Cupertino">
-                <div class="neighborhood-card-content">
-                    <h3>Cupertino</h3>
-                    <p>Home to Apple headquarters with award-winning schools. Suburban feel with excellent Asian cuisine and shopping.</p>
-                    <div class="stats">
-                        <div class="stat"><strong>10/10</strong>Schools</div>
-                        <div class="stat"><strong>$2.8M</strong>Median</div>
-                    </div>
-                    <a href="https://www.timchong-realtor.com" class="btn">Learn More</a>
-                </div>
-            </div>
-
-            <!-- Saratoga -->
-            <div class="neighborhood-card" id="saratoga">
-                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600" alt="Saratoga">
-                <div class="neighborhood-card-content">
-                    <h3>Saratoga</h3>
-                    <p>Luxurious hillside community with top schools, wine country charm, and stunning views. Perfect for those seeking upscale living.</p>
-                    <div class="stats">
-                        <div class="stat"><strong>10/10</strong>Schools</div>
-                        <div class="stat"><strong>$3.8M</strong>Median</div>
-                    </div>
-                    <a href="https://www.timchong-realtor.com" class="btn">Learn More</a>
-                </div>
-            </div>
-
-            <!-- Los Gatos -->
-            <div class="neighborhood-card" id="los-gatos">
-                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600" alt="Los Gatos">
-                <div class="neighborhood-card-content">
-                    <h3>Los Gatos</h3>
-                    <p>Charming downtown with boutiques, restaurants, and mountain views. Small-town feel with excellent schools and outdoor recreation.</p>
-                    <div class="stats">
-                        <div class="stat"><strong>9/10</strong>Schools</div>
-                        <div class="stat"><strong>$2.9M</strong>Median</div>
-                    </div>
-                    <a href="https://www.timchong-realtor.com" class="btn">Learn More</a>
-                </div>
-            </div>
+      <div class="hero-text">
+        <p class="eyebrow">Peninsula & South Bay Neighborhoods</p>
+        <h1>Luxury Living in Silicon Valley</h1>
+        <p class="subtitle">
+          Curated neighborhood insights to help you find your perfect home in one of the most sought‑after markets in the world.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://www.timchong-realtor.com/" target="_blank" rel="noopener">
+            Visit Main Website
+          </a>
+          <a class="btn btn-outline" href="#neighborhoods">
+            Explore Neighborhoods
+          </a>
         </div>
+        <div class="hero-stats">
+          <div>
+            <span class="stat-label">Featured Cities</span>
+            <span class="stat-value">6</span>
+          </div>
+          <div>
+            <span class="stat-label">Top Schools</span>
+            <span class="stat-value">9–10 / 10</span>
+          </div>
+          <div>
+            <span class="stat-label">Median Prices</span>
+            <span class="stat-value">$1.9M–$3.8M</span>
+          </div>
+        </div>
+      </div>
     </div>
+  </header>
 
-    <footer>
-        <h3>Ready to Find Your Dream Home?</h3>
-        <p style="margin: 1rem 0;">Contact Tim Chong, Your Peninsula Real Estate Expert</p>
-        <p>📞 <a href="tel:4084599777">408.459.9777</a> | ✉️ <a href="mailto:tim.chong@kw.com">tim.chong@kw.com</a></p>
-        <p style="margin-top: 1rem;"><a href="https://www.timchong-realtor.com">Visit My Main Website</a></p>
-        <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.7;">© 2026 Tim Chong, Realtor | Keller Williams</p>
-    </footer>
+  <main>
+    <section id="neighborhoods" class="section section-light">
+      <div class="container">
+        <h2 class="section-title">Discover Your Perfect Neighborhood</h2>
+        <p class="section-intro">
+          Each city offers a unique blend of lifestyle, schools, and amenities. Browse curated highlights below, then connect to explore tailored options.
+        </p>
+
+        <div class="grid">
+          <!-- Palo Alto -->
+          <article id="palo-alto" class="card">
+            <div class="card-header">
+              <h3>Palo Alto</h3>
+              <span class="city-tag">Iconic & Academic</span>
+            </div>
+            <p class="card-text">
+              Home to Stanford University, Palo Alto pairs tree‑lined streets and architectural charm with a vibrant downtown and world‑class innovation.
+            </p>
+            <div class="card-meta">
+              <div>
+                <span class="meta-label">Schools</span>
+                <span class="meta-value">9 / 10</span>
+              </div>
+              <div>
+                <span class="meta-label">Median Price</span>
+                <span class="meta-value">$3.5M</span>
+              </div>
+            </div>
+            <a class="card-link" href="https://www.timchong-realtor.com/" target="_blank" rel="noopener">
+              Learn more about Palo Alto →
+            </a>
+          </article>
+
+          <!-- Mountain View -->
+          <article id="mountain-view" class="card">
+            <div class="card-header">
+              <h3>Mountain View</h3>
+              <span class="city-tag">Tech & Lifestyle</span>
+            </div>
+            <p class="card-text">
+              Anchored by Google and a lively Castro Street, Mountain View blends tech‑centric energy with parks, trails, and a strong community feel.
+            </p>
+            <div class="card-meta">
+              <div>
+                <span class="meta-label">Schools</span>
+                <span class="meta-value">8 / 10</span>
+              </div>
+              <div>
+                <span class="meta-label">Median Price</span>
+                <span class="meta-value">$2.1M</span>
+              </div>
+            </div>
+            <a class="card-link" href="https://www.timchong-realtor.com/" target="_blank" rel="noopener">
+              Learn more about Mountain View →
+            </a>
+          </article>
+
+          <!-- Sunnyvale -->
+          <article id="sunnyvale" class="card">
+            <div class="card-header">
+              <h3>Sunnyvale</h3>
+              <span class="city-tag">Balanced & Central</span>
+            </div>
+            <p class="card-text">
+              A family‑friendly hub with top‑rated schools, parks, and a central Silicon Valley location, offering exceptional value and convenience.
+            </p>
+            <div class="card-meta">
+              <div>
+                <span class="meta-label">Schools</span>
+                <span class="meta-value">8 / 10</span>
+              </div>
+              <div>
+                <span class="meta-label">Median Price</span>
+                <span class="meta-value">$1.9M</span>
+              </div>
+            </div>
+            <a class="card-link" href="https://www.timchong-realtor.com/" target="_blank" rel="noopener">
+              Learn more about Sunnyvale →
+            </a>
+          </article>
+
+          <!-- Cupertino -->
+          <article id="cupertino" class="card">
+            <div class="card-header">
+              <h3>Cupertino</h3>
+              <span class="city-tag">Top Schools</span>
+            </div>
+            <p class="card-text">
+              Home to Apple Park and award‑winning schools, Cupertino offers a polished suburban lifestyle with renowned dining and shopping.
+            </p>
+            <div class="card-meta">
+              <div>
+                <span class="meta-label">Schools</span>
+                <span class="meta-value">10 / 10</span>
+              </div>
+              <div>
+                <span class="meta-label">Median Price</span>
+                <span class="meta-value">$2.8M</span>
+              </div>
+            </div>
+            <a class="card-link" href="https://www.timchong-realtor.com/" target="_blank" rel="noopener">
+              Learn more about Cupertino →
+            </a>
+          </article>
+
+          <!-- Saratoga -->
+          <article id="saratoga" class="card">
+            <div class="card-header">
+              <h3>Saratoga</h3>
+              <span class="city-tag">Hillside Luxury</span>
+            </div>
+            <p class="card-text">
+              A luxurious hillside community with vineyard ambience, exceptional schools, and sweeping valley views for those seeking an elevated retreat.
+            </p>
+            <div class="card-meta">
+              <div>
+                <span class="meta-label">Schools</span>
+                <span class="meta-value">10 / 10</span>
+              </div>
+              <div>
+                <span class="meta-label">Median Price</span>
+                <span class="meta-value">$3.8M</span>
+              </div>
+            </div>
+            <a class="card-link" href="https://www.timchong-realtor.com/" target="_blank" rel="noopener">
+              Learn more about Saratoga →
+            </a>
+          </article>
+
+          <!-- Los Gatos -->
+          <article id="los-gatos" class="card">
+            <div class="card-header">
+              <h3>Los Gatos</h3>
+              <span class="city-tag">Charm & Views</span>
+            </div>
+            <p class="card-text">
+              Boutique shopping, acclaimed dining, and mountain backdrops create a refined small‑town feel with quick access to nature and top schools.
+            </p>
+            <div class="card-meta">
+              <div>
+                <span class="meta-label">Schools</span>
+                <span class="meta-value">9 / 10</span>
+              </div>
+              <div>
+                <span class="meta-label">Median Price</span>
+                <span class="meta-value">$2.9M</span>
+              </div>
+            </div>
+            <a class="card-link" href="https://www.timchong-realtor.com/" target="_blank" rel="noopener">
+              Learn more about Los Gatos →
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container section-flex">
+        <div>
+          <h2 class="section-title">Ready to Find Your Dream Home?</h2>
+          <p class="section-intro">
+            Partner with a local expert who understands the nuances of each neighborhood, from school boundaries and commute times to off‑market opportunities.
+          </p>
+        </div>
+        <div class="contact-card">
+          <p class="contact-name">Tim Chong</p>
+          <p class="contact-role">Peninsula & South Bay Real Estate Expert</p>
+          <p class="contact-line">
+            📞 <a href="tel:4084599777">408.459.9777</a>
+          </p>
+          <p class="contact-line">
+            ✉️ <a href="mailto:tim.chong@kw.com">tim.chong@kw.com</a>
+          </p>
+          <a class="btn btn-primary full-width" href="https://www.timchong-realtor.com/" target="_blank" rel="noopener">
+            Schedule a Consultation
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 Tim Chong, Realtor | Keller Williams</p>
+      <p class="footer-small">
+        Information deemed reliable but not guaranteed. Always verify school and market data independently.
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
